@@ -1,0 +1,107 @@
+<div>
+    {{#with person}}
+    <div>
+        <div>
+            <h2>{{> title data=name big=true }}</h2>
+        </div>
+        <p>
+            <em>
+                {{age}}
+            </em>
+        </p>
+        <p>
+            <em>
+                {{gender}}
+            </em>
+        </p>
+        <div>
+            {{#with address}}
+            <address>
+                {{street}}
+                {{city}}
+                {{state}}
+                {{zip}}
+                {{country}}
+            </address>
+            {{/with}}
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div>
+        <h2>{{> title data='Education' big=false }}</h2>
+        <ul>
+            {{#each education}}
+            <li>
+                {{degree}}
+            </li>
+            <li>
+                {{major}}
+            </li>
+            <li>
+                {{university}}
+            </li>
+            <li>
+                {{graduationYear}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <br>
+    <div>
+        <h2>{{> title data='Work experience' big=false }}</h2>
+        <ul>
+            {{#each workExperience}}
+            <li>
+                {{company}} <em><b>({{year_founded}})</b></em>
+            </li>
+            <li>
+                {{title}}
+                <em><b>({{startDate}} - {{endDate}})</b></em>
+            </li>
+            <li>
+                {{industry}}
+                <ul>
+                    {{#each responsibilities}}
+                    <li>
+                        {{this}}
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+            <br>
+    </div>
+    <div>
+        <div>
+            <h3>{{> title data='Employees' big=false }}</h3>
+        </div>
+        <ul>
+            {{#each employees}}
+            <li>
+                <p><b>{{name}}</b>
+                    <em>
+                        ({{position}})
+                    </em>
+                    <br>
+                    {{department}}
+                </p>
+            </li>
+            <div>
+                <div>
+                    <h3>{{> title data='Projects' big=false }}</h3>
+                </div>
+                <ul>
+                    {{#each projects}}
+                    <li>
+                        <p><b>{{name}}</b> <br> {{description}} - <em>({{status}})</em> </p>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{/each}}
+        </ul>
+    </div>
+    {{/each}}
+    </ul>
+    {{/with}}
+</div>
