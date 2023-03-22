@@ -137,10 +137,40 @@
                             {{#each team_members}}
                             <div>
                                 <h4>{{> title data='Projects:' big=false }}</h4>
-                                {{#each projects}}
-                                {{name}}
-                                {{/each}}
+                                <ul>
+                                    {{#each projects}}
+                                    <li>
+                                        {{name}} - <em>({{description}})</em>
+                                    </li>
+                                    {{/each}}
+                                </ul>
                             </div>
+                            <div>
+                                <h4>{{> title data='Technologies:' big=false }}</h4>
+                                <ul>
+                                    {{#each projects}}
+                                    <li>
+                                        {{technologies.[0]}}
+                                    </li>
+                                    <li>
+                                        {{technologies.[1]}}
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                            {{#each projects}}
+                            <div>
+                                <h4>{{> title data='Team_members:' big=false }}</h4>
+                                <ul>
+                                    {{#each team_members}}
+                                    <li>
+                                        {{name}}
+                                        - <em>({{title}})</em>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                            {{/each}}
                             {{/each}}
                             {{/each}}
                         </ul>
