@@ -1,0 +1,44 @@
+<div>
+	<div>
+		<h1>{{name}}</h1> <br>
+		<span>{{birthdate}}</span> <br>
+		<span>{{birthplace}}</span> <br>
+		<span>{{deathdate}}</span> <br>
+		<span>{{deathplace}}</span> <br>
+		<span>{{nationality}}</span> <br>
+		<span>{{occupation}}</span> <br>
+	</div>
+	<div>
+		<b>
+			<p>Known_for:</p>
+		</b>
+		<ul>
+			{{#each known_for}}
+			<li>
+				{{this}}
+			</li>
+			{{/each}}
+		</ul>
+	</div>
+	<div>
+		<b>
+			<p>Education:</p>
+		</b>
+		<ul>
+			{{#each education}}
+			<li>
+				{{degree}}
+			</li>
+			<li>
+				{{field}}
+			</li>
+			<li>
+				{{institution}}
+			</li>
+			<li>
+				{{year}}
+			</li>
+			{{/each}}
+		</ul>
+	</div>
+</div>
