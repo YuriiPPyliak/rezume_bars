@@ -317,8 +317,7 @@ router.get('/person', function (req, res) {
                                                 {
                                                     name: 'Alice Johnson',
                                                     title: 'Software Engineer',
-                                                    email:
-                                                        'alice.johnson@example.com',
+                                                    email: 'alice.johnson@example.com',
                                                     skills: ['Java', 'Python', 'SQL'],
                                                     projects: [
                                                         {
