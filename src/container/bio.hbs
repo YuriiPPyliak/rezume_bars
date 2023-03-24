@@ -41,4 +41,119 @@
 			{{/each}}
 		</ul>
 	</div>
+	<div>
+		<b>
+			<p>Notable_publications:</p>
+		</b>
+		<ul>
+			{{#each notable_publications}}
+			<li>
+				<u>{{title}}</u> <br>
+				- <em>{{year}}</em> <br>
+				- <em>{{publisher}}</em>
+			</li>
+			{{/each}}
+		</ul>
+	</div>
+	<div>
+		<b>
+			<p>Partners:</p>
+		</b>
+		<ul>
+			{{#each partners}}
+			<li>
+				<u>{{name}}</u> <br>
+				- <em>{{relationship}}</em> <br>
+				- <em>{{years}}</em>
+			</li>
+			{{/each}}
+		</ul>
+	</div>
+	<div>
+		<b>
+			<p>Awards:</p>
+		</b>
+		<ul>
+			{{#each awards}}
+			<li>
+				<u>{{title}}</u> <br>
+				- <em>{{year}}</em> <br>
+				- <em>{{description}}</em>
+			</li>
+			{{/each}}
+		</ul>
+	</div>
+	<div>
+		<b>
+			<p>Influences:</p>
+		</b>
+		<ul>
+			{{#each influences}}
+			<li>{{this}}</li>
+			{{/each}}
+		</ul>
+	</div>
+	<div>
+		<b>
+			<p>Influenced:</p>
+		</b>
+		<ul>
+			{{#each influenced}}
+			<li>{{this}}</li>
+			{{/each}}
+		</ul>
+	</div>
+	<div>
+		<b>
+			<p>Quotes:</p>
+		</b>
+		<ul>
+			{{#each quotes}}
+			<li>{{this}}</li>
+			{{/each}}
+		</ul>
+	</div>
+	<div>
+		<b>
+			<p>Major_discoveries:</p>
+		</b>
+		<ul>
+			{{#each major_discoveries}}
+			<li>
+				<u>{{title}}</u> <br>
+				- <em>{{year}}</em> <br>
+				- <em>{{publisher}}</em>
+			</li>
+			{{/each}}
+		</ul>
+	</div>
+	<div>
+		<b>
+			<p>Major_discoveries:</p>
+		</b>
+		<ul>
+			{{#each major_discoveries}}
+			<li>
+				<u>{{title}}</u> <br>
+				- <em>{{year}}</em> <br>
+				- <em>{{description}}</em>
+			</li>
+			{{/each}}
+		</ul>
+	</div>
+	<div>
+		<b>
+			<p>Contributions:</p>
+		</b>
+		<ul>
+			{{#each ontributions}}
+			<li>
+				<u>{{title}}</u> <br>
+				- <em>{{description}}</em> <br>
+				- <em>{{year}}</em>
+				- <em>{{field}}</em>
+			</li>
+			{{/each}}
+		</ul>
+	</div>
 </div>
