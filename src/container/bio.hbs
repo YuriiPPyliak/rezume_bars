@@ -122,20 +122,6 @@
 			<li>
 				<u>{{title}}</u> <br>
 				- <em>{{year}}</em> <br>
-				- <em>{{publisher}}</em>
-			</li>
-			{{/each}}
-		</ul>
-	</div>
-	<div>
-		<b>
-			<p>Major_discoveries:</p>
-		</b>
-		<ul>
-			{{#each major_discoveries}}
-			<li>
-				<u>{{title}}</u> <br>
-				- <em>{{year}}</em> <br>
 				- <em>{{description}}</em>
 			</li>
 			{{/each}}
@@ -146,14 +132,14 @@
 			<p>Contributions:</p>
 		</b>
 		<ul>
-			{{#each ontributions}}
+			{{#with contributions}}
 			<li>
 				<u>{{title}}</u> <br>
 				- <em>{{description}}</em> <br>
 				- <em>{{year}}</em>
 				- <em>{{field}}</em>
 			</li>
-			{{/each}}
+			{{/with}}
 		</ul>
 	</div>
 </div>
