@@ -1,0 +1,30 @@
+<div>
+	{{#with program}}
+	<main>
+		<div>
+			<h2>{{> title data='Excursion:' big=true }}</h2>
+			{{#with excursion}}
+			<div>
+				<span>{{name}}</span>
+				<b><em><span> - ({{date}})</span></em></b>
+			</div>
+			<div>
+				<div>
+					{{#with location}}
+					<p> - {{city}}, {{country}}</p>
+					{{/with}}
+				</div>
+			</div>
+			<div>
+				<h3>{{> title data='Program:' big=false }}</h3>
+				{{!-- <ul>
+					{{#each program}}
+					<li>{{name}}</li>
+					{{/each}}
+				</ul> --}}
+			</div>
+			{{/with}}
+		</div>
+	</main>
+	{{/with}}
+</div>
