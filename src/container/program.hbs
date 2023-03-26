@@ -84,8 +84,10 @@
 		</div> --}}
 		<div>
 			<h1>{{excursion.name}}</h1>
-			<p>{{excursion.location.city}}, {{excursion.location.country}}</p>
+			{{#with excursion.location}}
+			<p>{{city}}, {{country}}</p>
 			<p>{{excursion.date}}</p>
+			{{/with}}
 			{{#each excursion.program}}
 			<h2>{{name}}</h2>
 			<p>{{type}}, {{duration}} hours</p>
@@ -101,7 +103,9 @@
 				{{/if}}
 			</ul>
 			{{/each}}
-			<p>Guide: {{details.guide.name}}, {{details.guide.language}}, rating: {{details.guide.rating}}</p>
+			{{#with details.guide}}
+			<p>Guide: {{name}}, {{language}}, rating: {{rating}}</p>
+			{{/with}}
 			{{/if}}
 			{{#if details.venue}}
 			<h3>Cultural Show</h3>
