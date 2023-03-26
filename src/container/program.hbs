@@ -1,7 +1,7 @@
 <div>
 	{{#with program}}
 	<main>
-		<div>
+		{{!-- <div>
 			<h2>{{> title data='Excursion:' big=true }}</h2>
 			{{#with excursion}}
 			<div>
@@ -15,15 +15,105 @@
 					{{/with}}
 				</div>
 			</div>
+			<hr>
 			<div>
 				<h3>{{> title data='Program:' big=false }}</h3>
-				{{!-- <ul>
+				<ul>
 					{{#each program}}
-					<li>{{name}}</li>
+					<li>
+						{{name}} <br> <em> - {{type}}</em> <br> <em> - {{duration}}</em>
+					</li>
+					<div>
+						{{#with details}}
+						{{#with museum}}
+						<div>
+							<h3>{{> title data='Museum:' big=false }}</h3>
+							<u>{{name}}</u>
+							<br>
+							<em>
+								- {{location.address}}
+								<br>
+								- {{location.city}}, {{location.country}}
+							</em>
+						</div>
+						<div>
+							<h4>{{> title data='Exhibits:' big=false }}</h4>
+							=========================================
+							<ul>
+								{{#each exhibits}}
+								<li>
+									{{name}}
+									<br>
+									{{#unless artist}}
+									{{artist}}
+									{{/unless}}
+								</li>
+								{{/each}}
+							</ul>
+							===========================================
+							<ul>
+								{{#each exhibits}}
+								<li>
+									<h2>{{name}}</h2>
+									{{#if artist}}
+									<p>Artist: {{artist}}</p>
+									{{/if}}
+									<p>Description: {{description}}</p>
+									{{#if audio_guide}}
+									<p>Audio guide available</p>
+									{{else}}
+									<p>No audio guide available</p>
+									{{/if}}
+								</li>
+								{{/each}}
+							</ul>
+							<br>
+						</div>
+						{{/with}}
+						<div>
+							{{#with guide}}
+							{{name}} {{lamguage}} {{rating}}
+							{{/with}}
+						</div>
+						{{/with}}
+					</div>
 					{{/each}}
-				</ul> --}}
+				</ul>
 			</div>
 			{{/with}}
+		</div> --}}
+		<div>
+			<h1>{{excursion.name}}</h1>
+			<p>{{excursion.location.city}}, {{excursion.location.country}}</p>
+			<p>{{excursion.date}}</p>
+			{{#each excursion.program}}
+			<h2>{{name}}</h2>
+			<p>{{type}}, {{duration}} hours</p>
+			{{#if details.museum}}
+			<h3>Museum Visit</h3>
+			<p>{{details.museum.name}}, {{details.museum.location.city}}, {{details.museum.location.country}}</p>
+			{{#each details.museum.exhibits}}
+			<ul>
+				<li>{{name}} by {{artist}}</li>
+				<li>{{description}}</li>
+				{{#if audio_guide}}
+				<li>Audio guide available</li>
+				{{/if}}
+			</ul>
+			{{/each}}
+			<p>Guide: {{details.guide.name}}, {{details.guide.language}}, rating: {{details.guide.rating}}</p>
+			{{/if}}
+			{{#if details.venue}}
+			<h3>Cultural Show</h3>
+			<p>{{details.venue.name}}, {{details.venue.location.address}}, {{details.venue.location.city}}, {{details.venue.location.country}}</p>
+			{{#each details.performers}}
+			<ul>
+				<li>{{name}}, {{type}}</li>
+			</ul>
+			{{/each}}
+			<p>Guide: {{details.guide.name}}, {{details.guide.language}}, rating: {{details.guide.rating}}</p>
+			{{/if}}
+			{{/each}}
 		</div>
 	</main>
 	{{/with}}
