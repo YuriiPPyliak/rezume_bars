@@ -1,0 +1,121 @@
+<main>
+    <div>
+        <h1>{{make}} {{model}}</h1>
+        <div>
+            <span>Year:</span>
+            <em><b><span>{{year}}</span></b></em>
+        </div>
+        <div>
+            <span>Color:</span>
+            <em><b><span>{{color}}</span></b></em>
+        </div>
+    </div>
+    <br />
+    <hr />
+    <div>
+        {{#with features}}
+            <h2>Interior:</h2>
+            {{#with interior}}
+                <ul>
+                    {{#with seats}}
+                        <li>
+                            <h3>Seats:</h3>
+                            <div>
+                                -
+                                <span>Material:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{material}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+
+                            <div>
+                                -
+                                <span>Color:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{color}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+
+                            <div>
+                                -
+                                <span>Heated:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{#if heated}}
+                                                <span
+                                                >Yes</span>
+                                            {{else}}
+                                                <span>
+                                                    No
+                                                </span>
+                                            {{/if}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+
+                            <div>
+                                -
+                                <span>Ventilated:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{#if
+                                                ventilated
+                                            }}
+                                                <span
+                                                >Yes</span>
+                                            {{else}}
+                                                <span>
+                                                    No
+                                                </span>
+                                            {{/if}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                        </li>
+                    {{/with}}
+                </ul>
+                <ul>
+                    {{#with dashboard}}
+                        <li>
+                            <h3>Dashboard:</h3>
+                            <div>
+                                -
+                                <span>Material:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{material}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                -
+                                <span>Color:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{color}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                        </li>
+                    {{/with}}
+                </ul>
+            {{/with}}
+        {{/with}}
+    </div>
+</main>
