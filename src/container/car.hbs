@@ -1,0 +1,600 @@
+<main>
+    <div>
+        <h1>
+            {{make}}
+            {{model}}
+        </h1>
+        <div>
+            <span> - Year:</span>
+            <em><b><span>{{year}}</span></b></em>
+        </div>
+        <div>
+            <span> - Color:</span>
+            <em><b><span>{{color}}</span></b></em>
+        </div>
+    </div>
+    <br />
+    <hr />
+    <div>
+        {{#with features}}
+            <h2>Interior:</h2>
+            {{#with interior}}
+                <ul>
+                    {{#with seats}}
+                        <li>
+                            <h3>Seats:</h3>
+                            <div>
+                                <span> - Material:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{material}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                <span> - Color:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{color}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                <span> - Heated:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{#if heated}}
+                                                <span>Yes</span>
+                                            {{else}}
+                                                <span>
+                                                    No
+                                                </span>
+                                            {{/if}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                <span> - Ventilated:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{#if ventilated}}
+                                                <span>Yes</span>
+                                            {{else}}
+                                                <span>
+                                                    No
+                                                </span>
+                                            {{/if}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                        </li>
+                    {{/with}}
+                </ul>
+                <ul>
+                    {{#with dashboard}}
+                        <li>
+                            <h3>Dashboard:</h3>
+                            <div>
+                                -
+                                <span>Material:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{material}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                -
+                                <span>Color:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{color}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                        </li>
+                        <ul>
+                            {{#with display}}
+                                <li>
+                                    <h4>Display:</h4>
+                                    <div>
+                                        -
+                                        <span>
+                                            Type:
+                                        </span>
+                                        <em>
+                                            <b>
+                                                <span>
+                                                    {{type}}
+                                                </span>
+                                            </b>
+                                        </em>
+                                    </div>
+                                    <div>
+                                        -
+                                        <span>
+                                            Type:
+                                        </span>
+                                        <em>
+                                            <b>
+                                                <span>
+                                                    {{size}}
+                                                </span>
+                                            </b>
+                                        </em>
+                                    </div>
+                                    <div>
+                                        -
+                                        <span>
+                                            Resolution:
+                                        </span>
+                                        <em>
+                                            <b>
+                                                <span>
+                                                    {{resolution}}
+                                                </span>
+                                            </b>
+                                        </em>
+                                    </div>
+                                    <div>
+                                        -
+                                        <span>
+                                            Touchscreen:
+                                        </span>
+                                        <em>
+                                            <b>
+                                                <span>
+                                                    {{#if touchscreen}}
+                                                        <span>
+                                                            Yes
+                                                        </span>
+                                                    {{else}}
+                                                        <span>
+                                                            No
+                                                        </span>
+                                                    {{/if}}
+                                                </span>
+                                            </b>
+                                        </em>
+                                    </div>
+                                </li>
+                            {{/with}}
+                        </ul>
+                    {{/with}}
+                </ul>
+                <ul>
+                    {{#with audio}}
+                        <li>
+                            <h3>Audio:</h3>
+                            <div>
+                                -
+                                <span>System:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{system}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                -
+                                <span>Speakers:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{speakers}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                -
+                                <span>Subwoofer:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{#if subwoofer}}
+                                                <span>Yes</span>
+                                            {{else}}
+                                                <span>
+                                                    No
+                                                </span>
+                                            {{/if}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                -
+                                <span>Bluetooth:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{#if bluetooth}}
+                                                <span>Yes</span>
+                                            {{else}}
+                                                <span>
+                                                    No
+                                                </span>
+                                            {{/if}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                -
+                                <span>USB:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{#if USB}}
+                                                <span>Yes</span>
+                                            {{else}}
+                                                <span>
+                                                    No
+                                                </span>
+                                            {{/if}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                        </li>
+                    {{/with}}
+                </ul>
+            {{/with}}
+            <br />
+            <hr />
+            <br />
+            {{#with exterior}}
+                <h2>Exterior:</h2>
+                <ul>
+                    {{#with wheels}}
+                        <li>
+                            <h3>Wheels:</h3>
+                            <div>
+                                -
+                                <span>Size:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{size}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                -
+                                <span>type:</span>
+                                <em><b><span>{{type}}</span></b></em>
+                            </div>
+                            <div>
+                                -
+                                <span>Color:</span>
+                                <em><b><span>{{color}}</span></b></em>
+                            </div>
+                        </li>
+                    {{/with}}
+                </ul>
+                <ul>
+                    {{#with headlights}}
+                        <li>
+                            <h3>Headlights:</h3>
+                            <div>
+                                -
+                                <span>Type:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{type}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                -
+                                <span>Brightness:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{brightness}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                -
+                                <span>Automatic:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{#if automatic}}
+                                                <span>Yes</span>
+                                            {{else}}
+                                                <span>No</span>
+                                            {{/if}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                        </li>
+                    {{/with}}
+                </ul>
+                <ul>
+                    {{#with sunroof}}
+                        <li>
+                            <h3>Sunroof:</h3>
+                            <div>
+                                -
+                                <span>Type:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{type}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                -
+                                <span>Size:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{size}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                -
+                                <span>Automatic:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{#if automatic}}
+                                                <span>Yes</span>
+                                            {{else}}
+                                                <span>No</span>
+                                            {{/if}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                        </li>
+                    {{/with}}
+                </ul>
+            {{/with}}
+            <br />
+            <hr />
+            <br />
+            {{#with safety}}
+                <h2>Safety:</h2>
+                <ul>
+                    {{#with airbags}}
+                        <li>
+                            <h3>Airbags:</h3>
+                            <div>
+                                -
+                                <span>Front:</span>
+                                <em><b><span>{{front}}</span></b></em>
+                            </div>
+                            <div>
+                                -
+                                <span>Side:</span>
+                                <em><b><span>{{side}}</span></b></em>
+                            </div>
+                            <div>
+                                -
+                                <span>Knee:</span>
+                                <em><b><span>{{knee}}</span></b></em>
+                            </div>
+                            <div>
+                                -
+                                <span>Rear:</span>
+                                <em><b><span>{{rear}}</span></b></em>
+                            </div>
+                        </li>
+                    {{/with}}
+                </ul>
+                <ul>
+                    {{#with assistance}}
+                        <li>
+                            <h3>Assistance:</h3>
+                            <div>
+                                -
+                                <span>Blind_spot_monitoring:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{#if blind_spot_monitoring}}
+                                                <span>Yes</span>
+                                            {{else}}
+                                                <span>
+                                                    No
+                                                </span>
+                                            {{/if}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                -
+                                <span>Rear_cross_traffic_alert:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{#if rear_cross_traffic_alert}}
+                                                <span>Yes</span>
+                                            {{else}}
+                                                <span>
+                                                    No
+                                                </span>
+                                            {{/if}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                -
+                                <span>Lane_departure_warning:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{#if lane_departure_warning}}
+                                                <span>Yes</span>
+                                            {{else}}
+                                                <span>
+                                                    No
+                                                </span>
+                                            {{/if}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                -
+                                <span>Adaptive_cruise_control:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{#if adaptive_cruise_control}}
+                                                <span>Yes</span>
+                                            {{else}}
+                                                <span>
+                                                    No
+                                                </span>
+                                            {{/if}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                            <div>
+                                -
+                                <span>Collision_warning:</span>
+                                <em>
+                                    <b>
+                                        <span>
+                                            {{#if collision_warning}}
+                                                <span>Yes</span>
+                                            {{else}}
+                                                <span>
+                                                    No
+                                                </span>
+                                            {{/if}}
+                                        </span>
+                                    </b>
+                                </em>
+                            </div>
+                        </li>
+                    {{/with}}
+                </ul>
+            {{/with}}
+        {{/with}}
+        <br />
+        <hr />
+        <br />
+        {{#with engine}}
+            <div>
+                <h2>Engine:</h2>
+                <div>
+                    <span> - Type:</span>
+                    <em><b><span>{{type}}</span></b></em>
+                </div>
+                <div>
+                    <span> - Displacement:</span>
+                    <em><b><span>{{displacement}}</span></b></em>
+                </div>
+                <div>
+                    <span> - Horsepower:</span>
+                    <em><b><span>{{horsepower}}</span></b></em>
+                </div>
+                <div>
+                    <span> - Torque:</span>
+                    <em><b><span>{{torque}}</span></b></em>
+                </div>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <h3>Transmission:</h3>
+                        <div>
+                            <span> - Type:</span>
+                            <em><b><span>{{transmission.type}}</span></b></em>
+                        </div>
+                        <div>
+                            <span> - Displacement:</span>
+                            <em><b><span>{{transmission.gears}}</span></b></em>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        {{/with}}
+        <br />
+        <hr />
+        <br />
+        {{#with fuel_economy}}
+            <h2>Fuel_economy:</h2>
+            <div>
+                <span> - City:</span>
+                <em><b><span>{{city}}</span></b></em>
+            </div>
+            <div>
+                <span> - Highway:</span>
+                <em><b><span>{{highway}}</span></b></em>
+            </div>
+            <div>
+                <span> - Combined:</span>
+                <em><b><span>{{combined}}</span></b></em>
+            </div>
+        {{/with}}
+        <br />
+        <hr />
+        <br />
+        {{#with price}}
+            <h2>Price:</h2>
+            <div>
+                <span> - Base:</span>
+                <em><b><span>{{base}}</span></b></em>
+            </div>
+            <div>
+                <span> - Destination:</span>
+                <em><b><span>{{destination}}</span></b></em>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <h3>Options:</h3>
+                        <div>
+                            <span> - Navigation:</span>
+                            <em><b><span>{{options.navigation}}</span></b></em>
+                        </div>
+                        <div>
+                            <span> - Moonroof:</span>
+                            <em><b><span>{{options.moonroof}}</span></b></em>
+                        </div>
+                        <div>
+                            <span> - Premium_paint:</span>
+                            <em><b><span>{{options.premium_paint}}</span></b></em>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h1> Total: {{total}} <span>$</span></h1>
+            </div>
+        {{/with}}
+    </div>
+</main>

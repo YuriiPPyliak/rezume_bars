@@ -1,24 +1,7 @@
 {
-  "trailingComma": "all",
-  "tabWidth": 2,
-  "semi": false,
-  "singleQuote": true,
-  "printWidth": 60
-
-"editor.defaultFormatter": "esbenp.prettier-vscode",
-"editor.formatOnSave": true
-
-// "[typescript]": {
-//   "editor.defaultFormatter": "esbenp.prettier-vscode"
-// },
-// "[html]": {
-//   "editor.defaultFormatter": "esbenp.prettier-vscode"
-// },
-// "[json]": {
-//   "editor.defaultFormatter": "esbenp.prettier-vscode"
-// },
-// "[markdown]": {
-//   "editor.defaultFormatter": "esbenp.prettier-vscode"
-// }
-
+    "trailingComma": "all",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 1000
 }
