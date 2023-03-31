@@ -17,3 +17,17 @@ nav {
 section {
     padding: 16px;
 }
+
+.wrap-1,
+.wrap-2 {
+    margin-bottom: 50px;
+}
+
+.card {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.card:last-child {
+    margin-bottom: 0;
+}
