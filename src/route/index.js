@@ -1325,7 +1325,7 @@ router.get('/task31', function (req, res) {
                         },
                         title: 'New York City',
                         description:
-                            'New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quae architecto officiis non labore alias est',
+                            'New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quae architecto officiis alias est',
                         button: {
                             text: 'Read',
                             href: 'https://github.com/',
@@ -1353,7 +1353,7 @@ router.get('/task31', function (req, res) {
                         description:
                             "Tokyo, Japan’s bustling capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).",
                         button: {
-                            text: 'Reac',
+                            text: 'Read',
                             href: 'https://github.com/',
                         },
                     },
@@ -1366,7 +1366,7 @@ router.get('/task31', function (req, res) {
                         description:
                             "Sydney, capital of New South Wales and one of Australia's largest cities, is best known for its harborfront Opera House, with a distinctive sail-like design. Massive Darling Harbour and the smaller Circular Quay port are hubs of waterside life, with the arched Harbour Bridge and esteemed Royal Botanic Garden nearby. Sydney Tower’s outdoor platform, the Skywalk, offers 360-degree views of the city and suburbs.",
                         button: {
-                            text: 'Reac',
+                            text: 'Read',
                             href: 'https://github.com/',
                         },
                     },
@@ -1403,11 +1403,7 @@ router.get('/task31', function (req, res) {
                 cards: [
                     {
                         name: 'The Mona Lisa',
-                        items: [
-                            'Painting',
-                            'Oil on poplar panel',
-                            '1503-1519',
-                        ],
+                        items: ['Painting', 'Oil on poplar panel', '1503-1519',],
                     },
                     {
                         name: 'The Persistence of Memory',
@@ -1453,16 +1449,14 @@ router.get('/task31', function (req, res) {
                     {
                         header: 'Cooking',
                         title: 'The Joy of Cooking',
-                        description:
-                            'Cooking is a creative outlet that can bring people together over delicious food.',
+                        description: 'Cooking is a creative outlet that can bring people together over delicious food.',
                         button: 'Learn More',
                         footer: 'Photo by Brooke Lark on Unsplash',
                     },
                     {
                         header: 'Travel',
                         title: 'The Benefits of Traveling',
-                        description:
-                            'Traveling broadens your perspective, provides new experiences, and creates lasting memories.',
+                        description: 'Traveling broadens your perspective, provides new experiences, and creates lasting memories.',
                         button: 'Explore',
                         footer: 'Photo by Sime Basioli on Unsplash',
                     },
