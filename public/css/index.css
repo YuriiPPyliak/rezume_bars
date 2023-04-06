@@ -1,7 +1,9 @@
 html {
     max-width: 1024px;
+    /* max-width: 720px; */
 }
 
+/* Kyrylo styles
 body {
     margin: 32px;
     background: #fff;
@@ -16,8 +18,9 @@ nav {
 
 section {
     padding: 16px;
-}
+} */
 
+/* My styles */
 /* Стилі для task21 - 22
 .wrap-1,
 .wrap-2 {
