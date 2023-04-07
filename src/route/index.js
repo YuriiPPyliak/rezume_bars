@@ -1725,6 +1725,7 @@ router.get('/shophome', function (req, res) {
                 {
                     text: 'Library',
                     link: 'https://www.youtube.com/feed/library',
+                    disabled: true,
                 },
             ],
             [
