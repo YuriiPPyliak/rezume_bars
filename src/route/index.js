@@ -1835,6 +1835,32 @@ router.get('/bootstrap01', function (req, res) {
     //            ↙ cюди вводимо назву файлу з сontainer
     res.render('bootstrap01', {
         layout: 'bootstrap',
+
+        list: [
+            {
+                name: 'First button',
+            },
+
+            {
+                name: 'Secobdary button',
+            },
+
+            {
+                name: 'Error button',
+            },
+
+            {
+                name: 'Submit button',
+                disabled: true,
+            },
+        ],
+
+        user: {
+            name: 'Ivan',
+            role: 'Admin',
+            isConfirm: true,
+            age: 32,
+        },
     })
     //                  ↑↑ сюди вводимо JSON дані
 })

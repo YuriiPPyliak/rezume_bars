@@ -57,7 +57,7 @@
                     </ol>
                 </div>
                 <div class='col-12'>
-                    <button class='btn btn-warning rounded-pill mb-2'>Click!</button>
+                    <button class='btn btn-warning rounded-pill my-3'>Click!</button>
                     <div class='alert alert-dark'>
                         <h6>
                             Hello world!
@@ -68,4 +68,85 @@
             </div>
         </div>
     </div>
+
+    <hr class='my-5' />
+
+    <section>
+        <div class='display-5 mb-3'>Lesson 5</div>
+        <ul>
+
+            <br />
+            <br />
+        </ul>
+
+        <ul>
+            {{#each list}}
+                {{#if disabled}}
+                    <li>
+                        <button class='disabled'>
+                            {{name}}
+                        </button>
+                    </li>
+                {{else}}
+                    <li class='my-3'>
+                        <button class='active'>{{name}}</button>
+                    </li>
+                {{/if}}
+            {{/each}}
+        </ul>
+
+        <ul>
+            {{#each list}}
+                {{#if disabled}}
+                    <li>
+                        <button class='disabled'>{{name}}</button>
+                    </li>
+                {{else}}
+                    {{#if @last}}
+                        <li>
+                            <button class='disabled'>{{name}}</button>
+                        </li>
+                    {{else}}
+                        <li>
+                            <button>{{name}}</button>
+                        </li>
+                    {{/if}}
+                {{/if}}
+            {{/each}}
+        </ul>
+
+        <ul>
+            {{#each list}}
+                {{#if disabled}}
+                    {{#if @last}}
+                        <li>
+                            <button class='disabled'>{{name}}</button>
+                        </li>
+                    {{else}}
+                        <li>
+                            <button>{{name}}</button>
+                        </li>
+                    {{/if}}
+                {{else}}
+                    <li>
+                        <button>{{name}}</button>
+                    </li>
+                {{/if}}
+            {{/each}}
+        </ul>
+
+        <ul>
+            {{#each list}}
+                {{#if @last}}
+                    <li>
+                        <button class='disabled'>{{name}}</button>
+                    </li>
+                {{else}}
+                    <li>
+                        <button>{{name}}</button>
+                    </li>
+                {{/if}}
+            {{/each}}
+        </ul>
+    </section>
 </main>
