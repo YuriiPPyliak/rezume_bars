@@ -10,10 +10,9 @@
     "rules": {
         "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
     },
-    "overrides": [
-    ],
+    "overrides": [],
     "parserOptions": {
         "ecmaVersion": 7,
         "sourceType": "module"
-    }   
+    }
 }

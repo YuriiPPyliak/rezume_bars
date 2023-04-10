@@ -1,0 +1,16 @@
+<main>
+    {{> shopheader }}
+    <section>
+        <ol class='breadcrumb'>
+            {{#each breadcrumb}}
+                <li class='breadcrumb-item'>
+                    {{#if url}}
+                        <a href='{{url}}' target='_blank'>{{name}}</a>
+                    {{else}}
+                        {{name}}
+                    {{/if}}
+                </li>
+            {{/each}}
+        </ol>
+    </section>
+</main>
