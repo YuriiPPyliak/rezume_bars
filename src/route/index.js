@@ -2244,11 +2244,11 @@ router.get('/shopnews', function (req, res) {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/bootstrap01', function (req, res) {
+router.get('/bootstrapOld', function (req, res) {
     // res.render генерує нам HTML сторінку
 
     //            ↙ cюди вводимо назву файлу з сontainer
-    res.render('bootstrap01', {
+    res.render('bootstrapOld', {
         layout: 'bootstrap',
 
         list: [
