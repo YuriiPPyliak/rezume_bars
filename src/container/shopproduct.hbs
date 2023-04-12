@@ -109,93 +109,22 @@
             </div>
         {{/with}}
     </section>
-    {{!-- <section class='row'>
-        {{#with productData}}
-            <img class='col-6 mb-4 p-0' src='{{img}}' alt='image' />
 
-            {{#with item}}
-                <div class='col-6 p-0'>
-                    <table class='table table-bordered'>
-                        <thead>
-                            <tr>
-                                {{#each head}}
-                                    <th>{{this}}</th>
-                                {{/each}}
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {{#each body}}
-                                <tr>
-                                    {{#each this}}
-                                        <td>{{this}}</td>
-                                    {{/each}}
-                                </tr>
-                            {{/each}}
-                        </tbody>
-                    </table>
-                </div>
-            {{/with}}
+    <br />
+    <br class='my-5' />
+    <br />
+    <hr class='my-5' />
 
-            {{#with info}}
-                <div class='card col-6 mb-3'>
-                    <div class='card-body'>
-                        <h4 class='card-title'>{{title}}</h4>
-                        <div class='card-text my-2'>{{about}}</div>
-                        <h3>{{price}}</h3>
-                        {{#each category}}
-                            {{#if isHot}}
-                                <span class='badge rounded-pill text-bg-warning text-uppercase'>{{name}}</span>
-                            {{/if}}
-                            {{#if isNew}}
-                                <span class='badge rounded-pill text-bg-primary'>{{name}}</span>
-                            {{/if}}
-                            {{#if isBonus}}
-                                <span class='badge rounded-pill text-bg-info'>{{name}}</span>
-                            {{/if}}
-                        {{/each}}
-                    </div>
-                </div>
-            {{/with}}
+    <section>
+        {{> shopcard}}
 
-            <div class='card col-4 p-0'>
-                {{#with param}}
-                    <div class='card-header'>
-                        <div>{{title}}</div>
-                    </div>
-                    <ul class='list-group'>
-                        {{#each list}}
-                            <li class='list-group-item'>
-                                {{this}}
-                            </li>
-                        {{/each}}
-                    </ul>
-                {{/with}}
-            </div>
+        <hr class="my-5" />
 
-            <div class='alert alert-danger col-4'>
-                {{#with alert}}
-                    {{#if isError}}
-                        <p>{{text}}</p>
-                    {{/if}}
-                {{/with}}
-            </div>
+        {{> shopaction}}
 
-            <div class='card d-flex flex-row py-2'>
-                {{#each actionList}}
-                    {{#if isWarning}}
-                        <button class='btn btn-warning mx-3'>{{name}}</button>
-                    {{/if}}
-                    {{#if isError}}
-                        <button class='btn btn-outline-danger me-3'>{{name}}</button>
-                    {{/if}}
-                    {{#if isSuccess}}
-                        <button class='btn btn-success'>{{name}}</button>
-                    {{/if}}
-                    {{#if isGood}}
-                        <button class='btn btn-outline-success ms-3'>{{name}}</button>
-                    {{/if}}
-                {{/each}}
-            </div>
-        {{/with}}
-    </section> --}}
+        <hr class="mt-5" />
+
+        {{> shopfooter}}
+    </section>
+
 </main>
