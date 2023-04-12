@@ -1,0 +1,13 @@
+<section class='row m-0'>
+    <ol class='breadcrumb mb-4 col-12'>
+        {{#each breadcrumb}}
+            <li class='breadcrumb-item'>
+                {{#if url}}
+                    <a href='{{url}}' target='_blank'>{{name}}</a>
+                {{else}}
+                    {{name}}
+                {{/if}}
+            </li>
+        {{/each}}
+    </ol>
+</section>
