@@ -74,12 +74,37 @@
     <section>
         <div class='display-5 mb-3'>Lesson 5</div>
         <ul>
+            {{! Кирила варіант }}
+            {{!-- {{#each list}}
+                <li class="my-3">
+                    <button {{#if @last}}disabled{{/if}}>{{name}} - {{@index}}</button>
+                </li>
+            {{/each}} --}}
+
+            {{! мій варінт }}
+            {{#each list}}
+                {{#if @last}}
+                    <li class='my-3'>
+                        <button disabled>{{name}}</button>
+                    </li>
+                {{else}}
+                    <li class='my-3'>
+                        <button>{{name}}</button>
+                    </li>
+                {{/if}}
+            {{/each}}
 
             <br />
             <br />
+
+            {{#each user}}
+                <li class='my-3'>
+                    {{this}}
+                </li>
+            {{/each}}
         </ul>
 
-        <ul>
+        {{!-- <ul>
             {{#each list}}
                 {{#if disabled}}
                     <li>
@@ -147,6 +172,6 @@
                     </li>
                 {{/if}}
             {{/each}}
-        </ul>
+        </ul> --}}
     </section>
 </main>
