@@ -49,10 +49,84 @@
                                     </div>
                                 {{/with}}
                             {{/with}}
+
+                            <hr class='my-5 col-10' />
                         </div>
+
+                        {{#each switch}}
+                            <div class='form-check form-switch'>
+                                <label class='form-check-label'>{{text}}</label>
+                                {{#if isActive}}
+                                    <input type='checkbox' class='form-check-input active' />
+                                {{/if}}
+                                {{#unless isActive}}
+                                    <input type='checkbox' class='form-check-input' disabled />
+                                {{/unless}}
+                            </div>
+                        {{/each}}
                     {{/with}}
+                    <hr class='my-5 col-10' />
                 </div>
             {{/with}}
+        </div>
+
+        <div class='col-3'>
+            <div class='card p-2 mt-5 mb-4'>
+                {{#each action_block}}
+                    {{#if isSuccess}}
+                        <div>
+                            <button class='btn btn-success p-2 fw-bold'>{{text}}</button>
+                        </div>
+                    {{/if}}
+                    {{#if isDanger}}
+                        <div>
+                            <button class='btn btn-danger p-2 fw-bold my-2'>{{text}}</button>
+                        </div>
+                    {{/if}}
+                    {{#if isInfo}}
+                        <div>
+                            <button class='btn btn-info p-2 fw-bold'>{{text}}</button>
+                        </div>
+                    {{/if}}
+                {{/each}}
+            </div>
+
+            <div>
+                <div class='card p-2'>
+                    {{#with total}}
+                        <h2>{{title}}</h2>
+                        {{#each item_list}}
+                            <div>
+                                {{name}}
+                                {{price}}
+                            </div>
+                        {{/each}}
+
+                        <hr />
+
+                        {{#each additional_info}}
+                            <div>
+                                {{text}}
+                                {{value}}
+                            </div>
+                        {{/each}}
+
+                        <hr />
+                        {{#each button}}
+                            {{#if isPrimary}}
+                                <div>
+                                    <button class='btn btn-primary p-2 fw-bold'>{{text}}</button>
+                                </div>
+                            {{/if}}
+                            {{#if isOutline}}
+                                <div>
+                                    <button class='btn btn-outline-primary p-2 fw-bold mt-3'>{{text}}</button>
+                                </div>
+                            {{/if}}
+                        {{/each}}
+                    {{/with}}
+                </div>
+            </div>
         </div>
     </section>
 
