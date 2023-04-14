@@ -1,0 +1,59 @@
+<main>
+    {{!-- {{> shopheader}} --}}
+
+    <h1>{{header}}</h1>
+
+    <section class='row'>
+        <div class='col-7'>
+            {{#with contacts_data}}
+                <h2 class='mb-3 mt-5'>{{title}}</h2>
+                <div>
+                    {{#each buttons}}
+                        {{#if isPrimary}}
+                            <button class='btn btn-warning me-2'>{{text}}</button>
+                        {{/if}}
+                        {{#if isOutline}}
+                            <button class='btn btn-outline-warning'>{{text}}</button>
+                        {{/if}}
+                    {{/each}}
+
+                    {{#with form}}
+                        <div class='row g-3 mt-2'>
+                            {{#with input}}
+                                {{#with surname}}
+                                    <div class='col-5'>
+                                        <label class='form-label fs-5 fw-medium'>{{label}}</label>
+                                        <input placeholder='{{placeholder}}' class='form-control' />
+                                        <div class='form-text'>{{caption}}</div>
+                                    </div>
+                                {{/with}}
+                                {{#with name}}
+                                    <div class='col-5'>
+                                        <label class='form-label fs-5 fw-medium'>{{label}}</label>
+                                        <input placeholder='{{placeholder}}' class='form-control' />
+                                        <div class='form-text'>{{caption}}</div>
+                                    </div>
+                                {{/with}}
+                                {{#with phone}}
+                                    <div class='col-5'>
+                                        <label class='form-label fs-5 fw-medium'>{{label}}</label>
+                                        <input placeholder='{{placeholder}}' class='form-control' />
+                                        <div class='form-text'>{{caption}}</div>
+                                    </div>
+                                {{/with}}
+                                {{#with email}}
+                                    <div class='col-5'>
+                                        <label class='form-label fs-5 fw-medium'>{{label}}</label>
+                                        <input placeholder='{{placeholder}}' class='form-control' />
+                                        <div class='form-text'>{{caption}}</div>
+                                    </div>
+                                {{/with}}
+                            {{/with}}
+                        </div>
+                    {{/with}}
+                </div>
+            {{/with}}
+        </div>
+    </section>
+
+</main>
