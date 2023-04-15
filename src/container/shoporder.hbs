@@ -4,7 +4,7 @@
     <h1>{{header}}</h1>
 
     <section class='row'>
-        <div class='col-7'>
+        <div class='col-9'>
             {{#with contacts_data}}
                 <h2 class='mb-3 mt-5'>{{title}}</h2>
                 <div>
@@ -21,28 +21,28 @@
                         <div class='row g-3 mt-2'>
                             {{#with input}}
                                 {{#with surname}}
-                                    <div class='col-5'>
+                                    <div class='col-6'>
                                         <label class='form-label fs-5 fw-medium'>{{label}}</label>
                                         <input placeholder='{{placeholder}}' class='form-control' />
                                         <div class='form-text'>{{caption}}</div>
                                     </div>
                                 {{/with}}
                                 {{#with name}}
-                                    <div class='col-5'>
+                                    <div class='col-6'>
                                         <label class='form-label fs-5 fw-medium'>{{label}}</label>
                                         <input placeholder='{{placeholder}}' class='form-control' />
                                         <div class='form-text'>{{caption}}</div>
                                     </div>
                                 {{/with}}
                                 {{#with phone}}
-                                    <div class='col-5'>
+                                    <div class='col-6'>
                                         <label class='form-label fs-5 fw-medium'>{{label}}</label>
                                         <input placeholder='{{placeholder}}' class='form-control' />
                                         <div class='form-text'>{{caption}}</div>
                                     </div>
                                 {{/with}}
                                 {{#with email}}
-                                    <div class='col-5'>
+                                    <div class='col-6'>
                                         <label class='form-label fs-5 fw-medium'>{{label}}</label>
                                         <input placeholder='{{placeholder}}' class='form-control' />
                                         <div class='form-text'>{{caption}}</div>
@@ -50,7 +50,7 @@
                                 {{/with}}
                             {{/with}}
 
-                            <hr class='my-5 col-10' />
+                            <hr class='my-5 col-12' />
                         </div>
 
                         {{#each switch}}
@@ -65,7 +65,7 @@
                             </div>
                         {{/each}}
                     {{/with}}
-                    <hr class='my-5 col-10' />
+                    <hr class='my-5 col-12' />
                 </div>
             {{/with}}
         </div>
@@ -91,42 +91,59 @@
                 {{/each}}
             </div>
 
-            <div>
-                <div class='card p-2'>
-                    {{#with total}}
-                        <h2>{{title}}</h2>
-                        {{#each item_list}}
+            <div class='card p-2'>
+                {{#with total}}
+                    <h2>{{title}}</h2>
+                    {{#each item_list}}
+                        <div>
+                            {{name}}
+                            {{price}}
+                        </div>
+                    {{/each}}
+
+                    <hr />
+
+                    {{#each additional_info}}
+                        <div>
+                            {{text}}
+                            {{value}}
+                        </div>
+                    {{/each}}
+
+                    <hr />
+                    {{#each button}}
+                        {{#if isPrimary}}
                             <div>
-                                {{name}}
-                                {{price}}
+                                <button class='btn btn-primary p-2 fw-bold'>{{text}}</button>
                             </div>
-                        {{/each}}
-
-                        <hr />
-
-                        {{#each additional_info}}
+                        {{/if}}
+                        {{#if isOutline}}
                             <div>
-                                {{text}}
-                                {{value}}
+                                <button class='btn btn-outline-primary p-2 fw-bold mt-3'>{{text}}</button>
                             </div>
-                        {{/each}}
-
-                        <hr />
-                        {{#each button}}
-                            {{#if isPrimary}}
-                                <div>
-                                    <button class='btn btn-primary p-2 fw-bold'>{{text}}</button>
-                                </div>
-                            {{/if}}
-                            {{#if isOutline}}
-                                <div>
-                                    <button class='btn btn-outline-primary p-2 fw-bold mt-3'>{{text}}</button>
-                                </div>
-                            {{/if}}
-                        {{/each}}
-                    {{/with}}
-                </div>
+                        {{/if}}
+                    {{/each}}
+                {{/with}}
             </div>
+        </div>
+
+        <div class='col-9'>
+            {{#with delivery}}
+                <h2>{{title}}</h2>
+                <div class='card p-2'>
+                    {{#each select}}
+                        <div class='col-md-6 mb-3'>
+                            <label class='form-label'>{{label}}</label>
+                            <select class='form-select'>
+                                <option selected>{{placeholder}}</option>
+                                {{#each options}}
+                                    <option value='{{value}}'>{{text}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                    {{/each}}
+                </div>
+            {{/with}}
         </div>
     </section>
 
