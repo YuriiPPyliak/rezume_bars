@@ -1,0 +1,67 @@
+<main>
+    {{> shopheader}}
+
+    <section>
+        {{#with header}}
+            <h1>{{title}}</h1>
+            {{#with button}}
+                <a href='{{link}}' class='btn btn-outline-secondary mt-2'>{{text}}</a>
+            {{/with}}
+        {{/with}}
+    </section>
+
+    <hr class='mt-5 mb-4' />
+
+    {{> cartGoodsItem}}
+
+    <section>
+        {{#with total}}
+            <h2>{{title}}</h2>
+            <span class='display-6 fw-medium'>{{amount}}</span>
+            <div class='mt-2'>{{delivery}}</div>
+            {{#each buttons}}
+                {{#if isSuccess}}
+                    <div>
+                        <a href='{{link}}' target='_blank' class='btn btn-success mt-4'>{{text}}</a>
+                    </div>
+                {{else}}
+                    {{#if isOutline}}
+                        <div>
+                            <a href='{{link}}' target='_blank' class='btn btn-outline-success mt-3'>{{text}}</a>
+                        </div>
+                    {{/if}}
+                {{/if}}
+            {{/each}}
+            <hr class='my-5' />
+        {{/with}}
+    </section>
+
+    {{> shopcard}}
+
+    <hr class='my-5' />
+
+    <section class="mb-5">
+        {{#with subscribe}}
+            <div class='card text-bg-dark'>
+                <div class='card-body'>
+                    <h2>{{header}}</h2>
+                    <p class='my-4'>{{description}}</p>
+                    {{#each buttons}}
+                        {{#if @last}}
+                            <div>
+                                <a href='{{link}}' target='_blank' class='btn btn-primary mt-3'>{{text}}</a>
+                            </div>
+                        {{else}}
+                            <a href='{{link}}' target='_blank' class='btn btn-primary'>{{text}}</a>
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        {{/with}}
+    </section>
+
+	<hr class='mb-1' />`
+
+	{{> shopfooter}}
+
+</main>
