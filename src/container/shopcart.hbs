@@ -12,7 +12,39 @@
 
     <hr class='mt-5 mb-4' />
 
-    {{> cartGoodsItem}}
+    <section class='row'>
+    {{#each goodsBlock}}
+        <div class='card p-2 gy-4'>
+            <div class='row align-items-center'>
+                <img src='{{image}}' alt='lorem image' class='col-2 rounded' />
+                <div class='col-4'>
+                    <h2>{{name}}</h2>
+                    <p>{{description}}</p>
+                </div>
+                {{#with price}}
+                    <div class='col-1'>
+                        <span>{{title}}</span>
+                        <br />
+                        <h6>{{value}}</h6>
+                    </div>
+                {{/with}}
+                <span class='col-1 text-center'>{{amount}}</span>
+                <div class='col-2 invisible'>Empty row</div>
+                <div class='col-2'>
+                    {{#each buttons}}
+                        {{#if isPrimary}}
+                            <button class='btn btn-primary'>{{text}}</button>
+                        {{/if}}
+                        {{#if isDanger}}
+                            <button class='btn btn-outline-danger mt-4'>{{text}}</button>
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    {{/each}}
+    <hr class='my-5' />
+</section>
 
     <section>
         {{#with total}}

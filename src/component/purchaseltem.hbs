@@ -1,28 +1,28 @@
-{{#each itemList}}
-    <div class='col-3'>
-        <span>{{number}}</span>
-        <h5 class='mt-2'>{{status}}</h5>
-    </div>
-    <div class='col-1 invisible'>Empty row</div>
-    {{#with amount}}
-        <div class='col-2'>
-            <span>{{title}}</span>
-            <h6 class='mt-2'>{{value}}</h6>
-        </div>
-    {{/with}}
-    <div class='col-4'>
-        {{#each images}}
-            <img src='{{this}}' alt='random lorem photo' class='rounded' />
-        {{/each}}
-    </div>
+{{!-- {{#each itemList}} --}}
+<div class='col-3'>
+    <span>{{number}}</span>
+    <h5 class='mt-2'>{{status}}</h5>
+</div>
+<div class='col-1 invisible'>Empty row</div>
+{{#with amount}}
     <div class='col-2'>
-        {{#with button}}
-            {{#if isPrimary}}
-                <div>
-                    <a href='{{link}}' class='btn btn-Primary'>{{text}}</a>
-                </div>
-            {{/if}}
-        {{/with}}
+        <span>{{title}}</span>
+        <h6 class='mt-2'>{{value}}</h6>
     </div>
-    <hr class='my-2' />
-{{/each}}
+{{/with}}
+<div class='col-4'>
+    {{#each images}}
+        <img src='{{this}}' alt='random lorem photo' class='rounded' />
+    {{/each}}
+</div>
+<div class='col-2'>
+    {{#with button}}
+        {{#if isPrimary}}
+            <div>
+                <a href='{{link}}' class='btn btn-Primary'>{{text}}</a>
+            </div>
+        {{/if}}
+    {{/with}}
+</div>
+<hr class='my-2' />
+{{!-- {{/each}} --}}
