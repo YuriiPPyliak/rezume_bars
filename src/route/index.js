@@ -3218,7 +3218,7 @@ router.get('/shopreview', function (req, res) {
             formBlock: {
                 header: 'Відгуки покупців про Ноут',
                 rating: {
-                    title: 'Оцінка',
+                    title: 'Оцінка:',
                     value: '4.5/5',
                 },
                 actionBlock: {
@@ -3274,7 +3274,7 @@ router.get('/shopreview', function (req, res) {
                         },
                     ],
                     seller: {
-                        title: 'Продавець',
+                        title: 'Продавець:',
                         value: 'Machinery',
                     },
                 },
@@ -3289,7 +3289,7 @@ router.get('/shopreview', function (req, res) {
                     },
                     reviewBody: {
                         seller: {
-                            title: 'Продавець',
+                            title: 'Продавець:',
                             value: 'Machinery',
                         },
                         rating: {
