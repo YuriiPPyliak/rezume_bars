@@ -1,0 +1,32 @@
+<main>
+    {{!-- {{> shopheader}} --}}
+
+    <div>
+        <ol class='breadcrumb my-5'>
+            {{#each breadcrumb}}
+                <li class='breadcrumb-item'>
+                    {{#if url}}
+                        <a href='{{url}}' target='_blank'>{{name}}</a>
+                    {{else}}
+                        {{name}}
+                    {{/if}}
+                </li>
+            {{/each}}
+        </ol>
+    </div>
+
+    <h1>{{header}}</h1>
+
+    <div class='row'>
+        {{#each sortBlock}}
+            <div class='col-3'>
+                <select class='form-select'>
+                    <option selected>{{placeholder}}</option>
+                    {{#each options}}
+                        <option value='{{value}}'>{{text}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        {{/each}}
+    </div>
+</main>
