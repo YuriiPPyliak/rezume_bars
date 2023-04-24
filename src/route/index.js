@@ -3549,7 +3549,14 @@ router.get('/shopcatalog', function (req, res) {
             filterBlock: {
                 sellers: {
                     title: 'Продавець',
-                    list: [{ value: 'Machinery' }, { value: 'інші' }],
+                    list: [
+                        {
+                            value: 'Machinery'
+                        },
+                        {
+                            value: 'інші'
+                        }
+                    ],
                 },
                 brands: {
                     title: 'Бренд',
@@ -3577,8 +3584,8 @@ router.get('/shopcatalog', function (req, res) {
 
                 filterList: [
                     {
-                        title: 'Готов к отправке',
-                        options: [{ value: 'Готов к отправке' }],
+                        title: 'Готовий до відправки',
+                        options: [{ value: 'Готовий до відправки' }],
                     },
                     {
                         title: 'Процесор',
@@ -3618,6 +3625,7 @@ router.get('/shopcatalog', function (req, res) {
                             { value: 'Mac OS' },
                             { value: 'Без ОС' },
                         ],
+                        isLine: false,
                     },
                 ],
             },
