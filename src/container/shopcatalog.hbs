@@ -1,5 +1,5 @@
 <main>
-    {{!-- {{> shopheader}} --}}
+    {{> shopheader}}
 
     <div>
         <ol class='breadcrumb my-5'>
@@ -30,8 +30,8 @@
         {{/each}}
     </div>
 
-    <div class='row'>
-        <div class='col-4'>
+    <div class='row mb-5'>
+        <div class='col-3'>
             <div class='card'>
                 <div class='card-body'>
                     {{#with filterBlock}}
@@ -47,13 +47,11 @@
                             </div>
                             <hr class='my-3' />
                         {{/with}}
-
                         {{#with brands}}
                             <h5 class='mb-3'>{{title}}</h5>
                             {{#with input}}
                                 <input placeholder='{{placeholder}}' class='form-control mt-2' />
                             {{/with}}
-
                             <div class='mt-3'>
                                 {{#each options}}
                                     <div class='form-check my-2'>
@@ -64,7 +62,6 @@
                             </div>
                             <hr class='my-4' />
                         {{/with}}
-
                         {{#with price}}
                             <h5>{{title}}</h5>
                             {{#with range}}
@@ -76,7 +73,6 @@
                             {{/with}}
                             <hr class='my-4' />
                         {{/with}}
-
                         {{#each filterList}}
                             <h5>{{title}}</h5>
                             {{#each options}}
@@ -94,56 +90,59 @@
             </div>
         </div>
 
-        <div class='col-4'>
-            {{#each goodsList}}
-                <div class='card mb-3'>
-                    <img src='{{img}}' alt='#' class='card-img-top' />
-                    <div class='card-body'>
-                        {{#if isHot}}
-                            <span class='badge rounded-pill text-bg-warning text-uppercase'>Hot!</span>
-                        {{/if}}
-                        {{#if isNew}}
-                            <span class='badge rounded-pill text-bg-primary text-uppercase'>New</span>
-                        {{/if}}
-                        {{#if isFast}}
-                            <span class='badge rounded-pill text-bg-warning text-uppercase'>Fast</span>
-                        {{/if}}
-                        {{#if isFree}}
-                            <span class='badge rounded-pill text-bg-primary text-uppercase'>Free</span>
-                        {{/if}}
-                        <h4 class='mt-3'>{{name}}</h4>
-                        {{#with review}}
-                            <div>
-                                <p>{{amount}} {{text}}</p>
-                            </div>
-                        {{/with}}
-                        <h4>{{price}}</h4>
-                        <p>{{delivery}}</p>
-                        {{#each buttons}}
-                            {{#if isPrimary}}
-                                <div><a href='{{link}}' target='_blank' class='btn btn-primary'>{{text}}</a></div>
-                            {{else}}
-                                {{#if isSecondary}}
-                                    <div><a href='{{link}}' target='_blank' class='btn btn-secondary mt-2'>{{text}}</a></div>
+        <div class='col-9'>
+            <div class='row'>
+                {{#each goodsList}}
+                    <div class='col-5'>
+                        <div class='card mb-3'>
+                            <img src='{{img}}' alt='lorem photo' class='card-img-top' />
+                            <div class='card-body'>
+                                {{#if isHot}}
+                                    <span class='badge rounded-pill text-bg-warning text-uppercase me-1'>Hot!</span>
                                 {{/if}}
-                            {{/if}}
-                        {{/each}}
-                        <ul>
-                            {{#each characteristics}}
-                                <li class='mt-3'>
-                                    <p>{{title}}:{{value}}</p>
-                                </li>
-                            {{/each}}
-                        </ul>
+                                {{#if isNew}}
+                                    <span class='badge rounded-pill text-bg-primary text-uppercase me-1'>New</span>
+                                {{/if}}
+                                {{#if isFast}}
+                                    <span class='badge rounded-pill text-bg-warning text-uppercase me-1'>Fast</span>
+                                {{/if}}
+                                {{#if isFree}}
+                                    <span class='badge rounded-pill text-bg-primary text-uppercase'>Free</span>
+                                {{/if}}
+                                <h4 class='mt-3'>{{name}}</h4>
+                                {{#with review}}
+                                    <div>
+                                        <p>{{amount}} {{text}}</p>
+                                    </div>
+                                {{/with}}
+                                <h4>{{price}}</h4>
+                                <p>{{delivery}}</p>
+                                {{#each buttons}}
+                                    {{#if isPrimary}}
+                                        <div><a href='{{link}}' target='_blank' class='btn btn-primary'>{{text}}</a></div>
+                                    {{else}}
+                                        {{#if isSecondary}}
+                                            <div><a href='{{link}}' target='_blank' class='btn btn-secondary mt-2'>{{text}}</a></div>
+                                        {{/if}}
+                                    {{/if}}
+                                {{/each}}
+                                <ul>
+                                    {{#each characteristics}}
+                                        <li class='mt-3'>
+                                            <p>{{title}}:{{value}}</p>
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            {{/each}}
+                {{/each}}
+            </div>
         </div>
-        {{!-- {{> shopaction}} --}}
-
-        <hr class='mt-5' />
-
-        {{!-- {{> shopfooter}} --}}
-
     </div>
+    {{> shopaction}}
+
+    <hr class='mt-5' />
+
+    {{> shopfooter}}
 </main>
